@@ -40,7 +40,7 @@ class Trader:
             return True
         return False
 
-    def get_bnb_balance(self, wallet, in_ether: bool = False):
+    def get_bnb_balance(self, wallet, in_ether: bool = true):
         """Get the balance of BNB in a wallet."""
         balance = self.web3.eth.getBalance(wallet)
         return Web3.fromWei(balance, 'ether') if in_ether else balance
